@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bütünsel Performans Protokolü</title>
+    <style>
+        /* Genel Ayarlar ve Fontlar */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6;
+            color: #2c3e50;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Başlıklar */
+        h1 {
+            text-align: center;
+            color: #1a252f;
+            font-weight: 800;
+            font-size: 28px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #e74c3c;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        /* Tablo Ayarları */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Liste ve Grid Yapısı */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #e67e22;
+        }
+
+        /* Çıktı Butonu */
+        .btn-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .btn-print:hover {
+            background-color: #219653;
+        }
+
+        .alert-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        /* YAZDIRMA (PDF) AYARLARI */
+        @media print {
+            @page { margin: 1cm; size: A4 portrait; }
+            body { background: #fff; padding: 0; margin: 0; }
+            .container { box-shadow: none; padding: 0; margin: 0; max-width: 100%; border-radius: 0; }
+            .no-print { display: none !important; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 18px; margin-top: 20px; }
+            th, td { padding: 8px; font-size: 12px; }
+            li { font-size: 12px; }
+            .alert-box { border: 1px solid #ccc; color: #000; }
+            /* Sayfa bölünmesini engellemek için */
+            table, .grid-2 { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print no-print" onclick="window.print()">🖨️ PDF Kaydet / Çıktı Al</button>
+
+    <div class="container">
+        <h1>Bütünsel Performans Protokolü</h1>
+        <div class="subtitle">Hipertrofi (Kas Gelişimi) • Hücresel Yağ Yakımı • Temiz Sindirim</div>
+
+        <h2>🗓️ HAFTALIK ANTRENMAN PLANI (Ağırsağlam Upper/Lower)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>GÜN</th>
+                    <th>SABAH (Aç Karnına)</th>
+                    <th>SAAT 09:00 (Spor Salonu)</th>
+                    <th>AMACI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Pazartesi</strong></td>
+                    <td>Sadece Esneme ve Bol Su</td>
+                    <td><strong>Tam Dinlenme (OFF-DAY)</strong></td>
+                    <td>MSS (Sinir Sistemi) Onarımı, Bağırsak Arınması</td>
+                </tr>
+                <tr>
+                    <td><strong>Salı</strong></td>
+                    <td>10 km Bisiklet (Nabız 120-130)</td>
+                    <td><strong>Upper A (Üst Vücut)</strong></td>
+                    <td>Göğüs, Sırt, Omuz Güç Gelişimi</td>
+                </tr>
+                <tr>
+                    <td><strong>Çarşamba</strong></td>
+                    <td>10 km Bisiklet (Nabız 120-130)</td>
+                    <td><strong>Lower A (Alt Vücut)</strong></td>
+                    <td>Bacak, Kalça ve Büyüme Hormonu Tetiklemesi</td>
+                </tr>
+                <tr>
+                    <td><strong>Perşembe</strong></td>
+                    <td>15-20 km Bisiklet (Aktif Kardiyo)</td>
+                    <td>Dinlenme (Ağırlık Yok)</td>
+                    <td>Sadece iç organ (viseral) yağı yakımı</td>
+                </tr>
+                <tr>
+                    <td><strong>Cuma</strong></td>
+                    <td>10 km Bisiklet (Nabız 120-130)</td>
+                    <td><strong>Upper B (Üst Vücut)</strong></td>
+                    <td>Üst Vücut Hipertrofi (Hacim)</td>
+                </tr>
+                <tr>
+                    <td><strong>Cumartesi</strong></td>
+                    <td>10 km Bisiklet (Nabız 120-130)</td>
+                    <td><strong>Lower B (Alt Vücut)</strong></td>
+                    <td>Alt Vücut Hipertrofi ve Kalf (Baldır)</td>
+                </tr>
+                <tr>
+                    <td><strong>Pazar</strong></td>
+                    <td>Serbest Doğa Yürüyüşü / Sürüş</td>
+                    <td>Dinlenme (Ağırlık Yok)</td>
+                    <td>Mental toparlanma ve aile zamanı</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>⏱️ GÜNLÜK "ELİT" ZAMAN ÇİZELGESİ (Antrenman Günleri)</h2>
+        <table>
+            <tr>
+                <td style="width: 120px;"><strong>07:30 - 08:15</strong></td>
+                <td><strong>Açlık ve Yağ Yakımı:</strong> Uyanış. 2 bardak su içilir. Sıfır kalori! Zone-2 temposunda (rahat konuşulabilen hızda) hafif kardiyo yapılır. Amaç depo yağı yakmaktır.</td>
+            </tr>
+            <tr>
+                <td><strong>08:15 - 09:00</strong></td>
+                <td><strong>Geçiş:</strong> Duş ve salona hazırlık. Mide hala boş tutulur.</td>
+            </tr>
+            <tr>
+                <td><strong>09:00 - 10:15</strong></td>
+                <td><strong>Ağırsağlam İdmanı:</strong> Salonda program uygulanır. Ağırlıklar her hafta ufak ufak artırılır (Progressive Overload).</td>
+            </tr>
+            <tr>
+                <td><strong>10:15</strong></td>
+                <td><strong>Sentez (Onarım):</strong> Antrenman biter bitmez <span class="highlight">1 ölçek protein tozu SADECE SU ile</span> içilir. (Mide yorulmadan kas onarımı başlar).</td>
+            </tr>
+            <tr>
+                <td><strong>11:00 - 11:30</strong></td>
+                <td><strong>1. Öğün (Kahvaltı):</strong> Günün ilk katı gıdası yenir.</td>
+            </tr>
+            <tr>
+                <td><strong>19:00 - 20:00</strong></td>
+                <td><strong>2. Öğün (Kapanış):</strong> Akşam yemeği yenir ve mutfak ertesi gün saat 11:00'e kadar kapatılır (16:8 Aralıklı Oruç).</td>
+            </tr>
+        </table>
+
+        <div class="grid-2">
+            <div>
+                <h2>🍏 BESLENME & SİNDİRİM KURALLARI (Aidin Salih)</h2>
+                <ul>
+                    <li><span class="highlight">Altın Su Kuralı:</span> Yemeklerle birlikte ASLA su veya sıvı içilmez. Su, yemekten 30 dk önce kesilir, yemekten 2 saat sonra tekrar içmeye başlanır. Aksi halde sindirim çürür, göbek yapar.</li>
+                    <li><span class="highlight">Kombinasyon Kuralı:</span> Kırmızı/Beyaz et yenilen ana öğünlerde yoğurt, ayran, peynir tüketilmez. Etin yanına sadece sebze ve kaliteli karbonhidrat (pirinç, patates, yulaf) eklenir.</li>
+                    <li><span class="highlight">Pazartesi Arınması:</span> Pazartesi (Off-day) günleri karbonhidrat yarı yarıya düşürülür. Mide ve bağırsaklar dinlendirilir.</li>
+                </ul>
+            </div>
+            <div>
+                <h2>🏋️ AĞIRLIK ANTRENMANI KURALLARI</h2>
+                <ul>
+                    <li><span class="highlight">RiR (Cepteki Tekrar):</span> Ağırsağlam uygulamasında 2.0 RiR yazıyorsa; seti bitirdiğinde formun bozulmadan 2 tekrar daha yapacak gücün kalmalıdır. Setler tükenişe yakın bırakılmalıdır.</li>
+                    <li><span class="highlight">İlerleme:</span> Geçen hafta 50 kg kaldırdığın harekette, bu hafta 52.5 kg kaldırmaya veya aynı kiloyla 1 tekrar fazla yapmaya çalış. Kasa "büyümelisin" mesajı ver!</li>
+                    <li><span class="highlight">Form > Ağırlık:</span> Hareketi yanlış formda ağır yapmaktansa, doğru formda hafif yap. Eklemleri değil kası hisset.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <strong>💡 KOÇUN NOTU:</strong> Spor salonuna yorgun gidilmez. Bu yüzden bisikleti spordan önceye (aç karnına yağ yakmak için), yemeği ise spordan sonraya (kası beslemek için) koyduk. Bu doğanın ve bilimin sentezidir. Bu programa 4 hafta sadık kalın, disiplini bozmayın. Vücut yağ oranınızın düşüşünü ve gücünüzün artışını gözlerinizle göreceksiniz. Demiri hissedin!
+        </div>
+    </div>
+
+</body>
+</html>

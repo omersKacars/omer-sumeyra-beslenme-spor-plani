@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ege & Marmara Esintili Bütünsel Beslenme Kitapçığı</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6;
+            color: #2c3e50;
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a252f;
+            font-weight: 800;
+            font-size: 26px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #27ae60;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #d35400;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        /* Tarif Kartları Grid Yapısı */
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .recipe-card {
+            background-color: #fcfcfc;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .recipe-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #2980b9;
+            margin-bottom: 8px;
+        }
+
+        .recipe-macros {
+            font-size: 12px;
+            background-color: #ecf0f1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-size: 13px;
+            margin: 0;
+            color: #555;
+        }
+
+        .alert-box {
+            background-color: #e8f8f5;
+            border-left: 5px solid #1abc9c;
+            padding: 15px;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        /* Çıktı Butonu */
+        .btn-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .btn-print:hover {
+            background-color: #219653;
+        }
+
+        /* Yazdırma Ayarları - Sayfa Bölünmesi İçin */
+        @media print {
+            @page { margin: 1cm; size: A4 portrait; }
+            body { background: #fff; padding: 0; margin: 0; }
+            .container { box-shadow: none; padding: 0; margin: 0; max-width: 100%; border-radius: 0; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            .recipe-card { page-break-inside: avoid; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print no-print" onclick="window.print()">🖨️ PDF Kaydet / Çıktı Al</button>
+
+    <div class="container">
+        <h1>Bütünsel Beslenme Tarif Kitapçığı</h1>
+        <div class="subtitle">Ege & Marmara Esintili • Ekonomik • Yüksek Proteinli</div>
+
+        <div class="alert-box">
+            <strong>⚠️ Altın Kurallar (Aidin Salih Hatırlatması):</strong>
+            <ul style="margin-bottom: 0;">
+                <li>Yemeklerin yanında <b>asla</b> su, çay veya ayran içilmez. Sindirim sıvısı seyreltilmez.</li>
+                <li>Et (tavuk/balık/kırmızı et) olan masaya yoğurt, peynir, ayran gelmez. Proteinler birbiriyle savaştırılmaz.</li>
+                <li>Meyveler asla ana yemekten hemen sonra yenmez, mayalanıp göbekte yağ yapar. Ara öğünde tek başına yenir.</li>
+            </ul>
+        </div>
+
+        <h2>🍳 KAHVALTI ALTERNATİFLERİ (Saat 11:00 - İdman Sonrası)</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-title">1. Ege İşi Lorlu Yeşillik Omleti</div>
+                <div class="recipe-macros">Ekonomik & Yüksek Protein</div>
+                <ul>
+                    <li>3-4 adet yumurta</li>
+                    <li>3 yemek kaşığı tatlı Lor Peyniri (En ucuz ve en saf proteindir)</li>
+                    <li>Bol maydanoz, dereotu, taze soğan</li>
+                    <li>1 tatlı kaşığı sızma zeytinyağı</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Yeşillikleri doğrayıp yumurta ve lor ile çırpın. Tavada zeytinyağı ile pişirin. Yanında 10 adet Edremit/Ezine zeytini ve 2 dilim ekşi mayalı tam buğday ekmeği ile tüketin.</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">2. Çanakkale Klasik: Bol Domatesli Menemen</div>
+                <div class="recipe-macros">Likopen & Kaliteli Yağ</div>
+                <ul>
+                    <li>3 adet yumurta</li>
+                    <li>2 adet mevsim domatesi (veya kışlık konserve)</li>
+                    <li>2 adet yeşil biber</li>
+                    <li>1 yemek kaşığı zeytinyağı veya hakiki tereyağı</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Klasik menemen usulü pişirin. Yanında 1-2 dilim tam buğday ekmeği ile karbonhidrat ihtiyacınızı karşılayın. İdman sonrası kaslara mükemmel glikojen taşır.</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">3. Pazar Günü Yulaf Lapası (Ege İncirli)</div>
+                <div class="recipe-macros">Yoğun Karbonhidrat Yüklemesi</div>
+                <ul>
+                    <li>5-6 yemek kaşığı yulaf ezmesi</li>
+                    <li>1 su bardağı su (veya laktozsuz süt)</li>
+                    <li>2 adet kuru Ege inciri veya kuru üzüm</li>
+                    <li>2 tam ceviz içi ve toz tarçın</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Yulafı ocakta lapa olana kadar pişirin. Üzerine doğranmış incir, ceviz ve tarçın ekleyin. Ağır bacak idmanları ertesi için harika bir yakıttır.</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">4. Pratik "Geç Kaldım" Tabağı</div>
+                <div class="recipe-macros">Hızlı & Saf İçerik</div>
+                <ul>
+                    <li>3 adet haşlanmış yumurta (Kayısı kıvamı, sindirimi en kolaydır)</li>
+                    <li>15 adet çizik/kırma zeytin (Üzerine zeytinyağı, kekik, pul biber)</li>
+                    <li>Yarım demet roka veya marul (Limon sıkılmış)</li>
+                    <li>2 ince dilim siyez veya tam buğday ekmeği</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Yumurtaları haşlayıp yeşillik ve zeytinle doyurucu bir tabak yapın.</p>
+            </div>
+        </div>
+
+        <div class="page-break"></div> <!-- Yazdırırken Buradan İkinci Sayfaya Geçer -->
+
+        <h2>🍲 AKŞAM YEMEĞİ ALTERNATİFLERİ (Saat 19:00 - Et ve Süt Karışmaz!)</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-title">1. Fırın Tavuk & Zeytinyağlı Kekikli Patates</div>
+                <div class="recipe-macros">Kas İnşası Temel Öğünü</div>
+                <ul>
+                    <li>200-250 gr tavuk göğsü veya kemiksiz but</li>
+                    <li>1-2 adet orta boy patates (Elma dilim)</li>
+                    <li>Zeytinyağı, Çanakkale kekiği, toz biber, sarımsak</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Tavuk ve patatesleri baharatlayıp fırın poşetinde veya tepside pişirin. Yanında KOCAMAN limonlu, zeytinyağlı mevsim salata yiyin. (Ayran/Yoğurt yasak!).</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">2. Çanakkale Usulü Fırın Sardalya/Hamsi</div>
+                <div class="recipe-macros">Omega-3 & Doğal Arınma</div>
+                <ul>
+                    <li>300 gr mevsimlik ucuz balık (Sardalya, hamsi veya istavrit)</li>
+                    <li>1 büyük soğan (Halka doğranmış)</li>
+                    <li>Defne yaprağı, limon dilimleri</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Balıkları fırın tepsisine dizin, üzerine soğan ve limon ekleyip fırınlayın. Yanına 5-6 kaşık zeytinyağlı bulgur pilavı ve bol roka/turp salatası. En ekonomik ve en güçlü onarım yemeğidir.</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">3. Vücutçu Klasik: Yeşil Mercimek & Bulgur</div>
+                <div class="recipe-macros">Bitkisel Güç & Bütçe Dostu</div>
+                <ul>
+                    <li>1 büyük tabak kıymalı veya sade Yeşil Mercimek yemeği</li>
+                    <li>5-6 kaşık siyez/bulgur pilavı</li>
+                    <li>Közlenmiş biber veya turşu (Ev yapımı)</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Et fiyatlarının yüksek olduğu haftalarda kurtarıcıdır. Yeşil mercimek müthiş bir proteindir. Yanında kuru soğan yiyebilirsiniz.</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">4. Ege İşi Zeytinyağlı Taze Fasulye & Kıyma</div>
+                <div class="recipe-macros">Lif & Sindirim Dostu</div>
+                <ul>
+                    <li>1 porsiyon az kıymalı zeytinyağlı taze fasulye</li>
+                    <li>5-6 yemek kaşığı pirinç lapası veya sade makarna</li>
+                    <li>Bol sirkeli/limonlu çoban salata</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Zeytinyağlı yemekler mideyi yormaz. Pirinç ise kaslara idman için gereken glikojeni saf şekilde verir.</p>
+            </div>
+        </div>
+
+        <h2>🥤 SMOOTHIE & ARA ÖĞÜN (Antrenman Sonrası veya Saat 15:00)</h2>
+        <p style="margin-bottom: 10px; color: #7f8c8d; font-size: 14px;">Mideyi yormamak adına sıvı besinler ana yemekle içilmez, tek başına (izole) bir ara öğün olarak tüketilir.</p>
+        
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-title">1. "Mide Dostu" Yeşil Arınma (Tiens Uyumlu)</div>
+                <div class="recipe-macros">Ödem Atıcı / Sıfır Yağ</div>
+                <ul>
+                    <li>Yarım yeşil elma (Çekirdekleri alınmış)</li>
+                    <li>1 avuç ıspanak veya maydanoz</li>
+                    <li>Yarım limonun suyu & 1 fındık kadar taze zencefil</li>
+                    <li>1 bardak temiz su</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Hepsini blenderdan çekin. Özellikle göbek çevresindeki viseral yağı (12) kırmak ve karaciğeri temizlemek için mükemmeldir. İçine protein tozu EKLENMEZ.</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">2. Muzlu Fıstık Ezmeli Bomb (Kas Yapıcı)</div>
+                <div class="recipe-macros">Tatlı Krizi Engelleyici</div>
+                <ul>
+                    <li>1 adet yerli muz (Hafif kararmış tatlı muz)</li>
+                    <li>1 tatlı kaşığı şekersiz fıstık ezmesi</li>
+                    <li>1 çay bardağı yulaf & 1 bardak su (veya laktozsuz süt)</li>
+                </ul>
+                <p><strong>Hazırlanışı:</strong> Çok yoğun idman sonrası veya saat 15:00'te tatlı krizi gelirse blenderdan çekip için. Sizi akşam yemeğine kadar tok tutar.</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">3. En Klasik Ara Öğün: Sarı Leblebi & Kuru Üzüm</div>
+                <div class="recipe-macros">Türk İşi Pre-Workout</div>
+                <p>Mutfakta hazırlık yapacak vakit yoksa: 1 avuç sarı leblebi (mide asidini alır, karbonhidrattır) ve 1 yemek kaşığı kuru üzüm/kuru dut. Ucuz, çantada taşınabilir ve anında enerji verir.</p>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-title">4. Badem & Tarçınlı Elma</div>
+                <div class="recipe-macros">İnsülin Dengeleyici</div>
+                <p>Yarım yeşil veya kırmızı elmayı dilimleyin, üzerine toz tarçın serpin (Kan şekerini/insülini dengeler). Yanında 10 adet çiğ badem ile tüketin.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

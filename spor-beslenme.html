@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Beslenme ve Sindirim Kuralları</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="sport-page">
+  <main class="page page-shell">
+    <div class="container">
+      <header class="topbar">
+        <h1>Beslenme & Sindirim Kuralları</h1>
+        <a class="back-link" href="spor.html">← Spor menüsü</a>
+      </header>
+      <section class="content">
+        <h2 class="section-title">🍏 BESLENME & SİNDİRİM KURALLARI (Aidin Salih)</h2>
+        <div class="sport-note">
+          <strong>Yaklaşım Notu:</strong> Bu sayfa, Dr. Aidin Salih yaklaşımından esinlenen genel yaşam/beslenme prensiplerini derler.
+          Kronik hastalık, ilaç kullanımı, mide-bağırsak rahatsızlığı veya özel diyet gereksiniminde kişisel doktor ve diyetisyen takibi esastır.
+        </div>
+
+        <div class="guide-controls">
+          <div class="guide-search">
+            <input id="guide-search" type="search" placeholder="Konu ara: su, et-süt, arınma, öğün..." />
+          </div>
+          <div class="guide-chips" id="guide-chips">
+            <button type="button" data-topic="all" class="active">Tümü</button>
+            <button type="button" data-topic="su">Su Kuralı</button>
+            <button type="button" data-topic="kombinasyon">Kombinasyon</button>
+            <button type="button" data-topic="ogun">Öğün Akışı</button>
+            <button type="button" data-topic="arinma">Arınma</button>
+            <button type="button" data-topic="sindirim">Sindirim Desteği</button>
+            <button type="button" data-topic="pratik">Pratik Uygulama</button>
+            <button type="button" data-topic="uyari">Uyarılar</button>
+          </div>
+          <div class="guide-count" id="guide-count"></div>
+        </div>
+
+        <div class="guide-grid" id="guide-grid">
+          <article class="guide-block" data-topic="su ogun" data-text="altın su kuralı yemek öncesi sonrası su sindirim sıvısı">
+            <h3>1) Altın Su Kuralı</h3>
+            <ul>
+              <li><span class="highlight">Ana ilke:</span> Yemek sırasında su/sıvı tüketimini sınırla, suyu daha çok öğün aralarında al.</li>
+              <li><span class="highlight">Pratik uygulama:</span> Yemekten yaklaşık 30 dk önce su alımını azalt, yemekten sonra ilk 45-90 dk içinde çok yüksek hacimli sıvıdan kaçın.</li>
+              <li><span class="highlight">Hedef:</span> Mide asidi ve sindirim enzimlerinin daha etkili çalışmasına destek olmak.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block" data-topic="kombinasyon" data-text="et süt yoğurt ayran peynir kombinasyon kuralı">
+            <h3>2) Kombinasyon Kuralı (Et & Süt Ürünleri)</h3>
+            <ul>
+              <li><span class="highlight">Aidin Salih yaklaşımı:</span> Aynı ana öğünde etli yemekle yoğurt/ayran/peyniri birlikte tüketmeme eğilimi.</li>
+              <li><span class="highlight">Uygulama:</span> Etin yanında sebze + kontrollü karbonhidrat; süt ürünlerini başka öğüne kaydır.</li>
+              <li><span class="highlight">Amaç:</span> Şişkinlik ve hazımsızlık şikayetini azaltmak.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block" data-topic="ogun pratik" data-text="öğün sayısı aralıklı beslenme mutfak kapanışı 16 8">
+            <h3>3) Öğün Sayısı ve Yemek Penceresi</h3>
+            <ul>
+              <li>Güne tek tek küçük atıştırmalarla yayılmak yerine, planlı 2-3 öğün modeli daha sürdürülebilir olur.</li>
+              <li>Gece geç saat yemeğini sınırlamak, sindirim yükünü azaltır.</li>
+              <li><span class="highlight">Örnek:</span> 11:00 ilk ana öğün, 19:00 ikinci ana öğün, sonrasında mutfak kapanışı.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block" data-topic="arinma pratik" data-text="pazartesi arınması off day karbonhidrat azaltma">
+            <h3>4) Arınma Günü Prensibi (Off-Day)</h3>
+            <ul>
+              <li>Haftada 1 gün (ör. Pazartesi) toplam karbonhidratı azaltıp daha sade bir menüyle ilerlemek.</li>
+              <li>Bu günlerde lifli sebze, kaliteli protein ve su dengesine odaklanmak.</li>
+              <li><span class="highlight">Amaç:</span> Sindirim sistemine nispeten daha düşük yük bindirmek.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block" data-topic="sindirim" data-text="çiğneme hızı porsiyon mide bağırsak düzeni">
+            <h3>5) Sindirim Dostu Yeme Teknikleri</h3>
+            <ul>
+              <li>Lokmaları iyi çiğne, çok hızlı yemekten kaçın.</li>
+              <li>Porsiyonları mideyi aşırı doldurmayacak düzeyde tut.</li>
+              <li>Yemek sonrası hemen uzanmak yerine 10-15 dk hafif hareket et.</li>
+              <li>Baharat toleransını kişisel durumuna göre ayarla.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block" data-topic="pratik ogun" data-text="antrenman günü örnek akış kahvaltı akşam">
+            <h3>6) Antrenman Günü Örnek Akış</h3>
+            <p><span class="highlight">Sabah:</span> Açlık kardiyosu / su desteği (kişisel toleransa göre).</p>
+            <p><span class="highlight">Antrenman sonrası:</span> Protein odaklı toparlanma.</p>
+            <p><span class="highlight">11:00 öğünü:</span> Yumurta + sebze + kontrollü ekmek/patates.</p>
+            <p><span class="highlight">19:00 öğünü:</span> Et/balık/tavuk + sebze + ölçülü karbonhidrat.</p>
+          </article>
+
+          <article class="guide-block" data-topic="pratik" data-text="alışveriş listesi hazırlık meal prep haftalık plan">
+            <h3>7) Haftalık Pratik Uygulama Planı</h3>
+            <ul>
+              <li>Pazar gününü plan günü yap: protein kaynaklarını ve sebzeleri önceden belirle.</li>
+              <li>2-3 ana protein (tavuk, balık, bakliyat) ve 2-3 temel karbonhidrat (bulgur, pirinç, patates) seç.</li>
+              <li>Her gün karar vermek yerine hazır şablon menülerle ilerle.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block" data-topic="uyari" data-text="uyarı reflü gastrit diyabet böbrek tansiyon doktor">
+            <h3>8) Güvenlik ve Uyarılar</h3>
+            <ul>
+              <li>Reflü, gastrit, ülser, diyabet, böbrek hastalığı veya tansiyon sorunu varsa plan kişiselleştirilmelidir.</li>
+              <li>Uzun süren halsizlik, baş dönmesi, ciddi kabızlık/ishal veya mide ağrısında programı zorlamadan uzman görüşü al.</li>
+              <li>Takviye kullanımını rastgele değil, tetkik sonuçlarına göre yap.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="app.js"></script>
+  <script>
+    (() => {
+      const search = document.getElementById("guide-search");
+      const chipWrap = document.getElementById("guide-chips");
+      const chips = Array.from(chipWrap.querySelectorAll("button"));
+      const blocks = Array.from(document.querySelectorAll(".guide-block"));
+      const count = document.getElementById("guide-count");
+      let activeTopic = "all";
+
+      function render() {
+        const q = search.value.trim().toLowerCase();
+        let visible = 0;
+        blocks.forEach((block) => {
+          const topics = (block.dataset.topic || "").split(" ");
+          const byTopic = activeTopic === "all" || topics.includes(activeTopic);
+          const byText = !q || (block.dataset.text || "").toLowerCase().includes(q) || block.textContent.toLowerCase().includes(q);
+          const ok = byTopic && byText;
+          block.style.display = ok ? "" : "none";
+          if (ok) visible += 1;
+        });
+        count.textContent = `${visible} / ${blocks.length} başlık gösteriliyor`;
+      }
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          activeTopic = chip.dataset.topic;
+          chips.forEach((c) => c.classList.toggle("active", c === chip));
+          render();
+        });
+      });
+      search.addEventListener("input", render);
+      render();
+    })();
+  </script>
+</body>
+</html>
